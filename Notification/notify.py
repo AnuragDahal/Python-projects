@@ -1,5 +1,5 @@
 import win10toast
-#win11toast is a module that can be used to display windows 10 notifications
+#win10toast is a module that can be used to display windows 10 notifications
 import datetime
 
 data=datetime.datetime.now()
