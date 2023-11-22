@@ -1,0 +1,22 @@
+p {
+  background-color: blue;
+  color: white;
+}
+/* p:first-child{/*this will select all first p elements in the document */
+/* background-color: yellow;
+  color: red;
+} */
+
+/* this will select the first p element in the div */
+/* div p:first-child{
+  background-color: yellow;
+  color: red;
+} */
+div > p:first-child {
+  background-color: yellow;
+  color: red;
+}
+/* div p{
+  background-color: blue;
+  color: white;
+} */

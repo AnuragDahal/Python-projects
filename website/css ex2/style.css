@@ -1,0 +1,51 @@
+
+h1 {
+  display: inline-block;
+  background-color: rgb(207, 155, 215);
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 13;
+  color: rgb(183, 46, 46);
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin: 3px;
+  padding: 3px;
+  font-style: italic;
+  border-radius: 15px;
+}
+.image{
+  display: block;
+  position: relative;
+  left:20%;
+  margin:40px;
+  padding: 10px;
+  top:20%;
+}
+.topic{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  position: absolute;
+  left:20%;
+}
+.content{
+
+  margin:20px;
+  margin-bottom: 0px;
+  text-align: left;
+  position: relative;
+}
+.button{
+
+}
+.card{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width:500px;
+  border: 1px solid black;
+  border-radius: 15px;
+}

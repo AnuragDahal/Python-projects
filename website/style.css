@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(61, 190, 223);
+    color: white;
+}
+/* decending selector */
+div p{
+    padding: 10px;
+    margin: 2px;
+}
+/* pseudo selector */
+a:link{
+    color: green;
+    padding: 2px;
+    margin: 10px;
+
+}
+a:visited{
+    color: rgb(255, 255, 255);
+}
+a:hover{
+    color: rgb(115, 20, 20);
+}
+pre{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    margin: 10px;
+    height: 200px;
+    box-sizing: border-box;
+    
+}

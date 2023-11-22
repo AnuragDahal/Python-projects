@@ -1,0 +1,70 @@
+.box {
+  /* text-align: center; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+  font-weight: 120px;
+  text-decoration: dashed;
+  border: 10px solid blueviolet;
+  margin: 20px;
+  padding: 0px;
+  min-width: 10vw;
+  min-height: 10vh;
+  /* visibility: hidden; */
+}
+.box > li {
+  list-style: lower-roman;
+  margin: 10px;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 20px;
+  display: ;
+}
+.container {
+  border: 5px solid red;
+  height: 8em;
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: underline;
+  text-decoration-color: brown;
+  /* white-space: nowrap; */
+  overflow:hidden;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.5em;
+  text-shadow: 10px 10px 10px black;
+}
+@media only screen and (max-width:780px){
+  .container {
+ 
+    /* white-space: nowrap; */
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    font-style: italic;
+    text-align: left;
+    line-height: 1.5em;
+    text-shadow: 10px 10px 10px black;
+  }
+
+}
+
+.lists ul li {
+background-color: aqua;
+  font-size: 30px;
+  list-style-type:"❤️"; 
+  list-style-position: inside;
+  line-height: 1.8em;
+  
+}
+.lists ol li{
+
+  font-size: 30px;
+  list-style: lower-roman;
+
+  
+
+}

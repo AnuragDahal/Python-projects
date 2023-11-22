@@ -1,0 +1,34 @@
+.boxmodel{
+    background-color: bisque;
+    margin:10px;
+
+}
+.box1{
+    color: blueviolet;
+    font-size: 40;
+    background-color: black;
+    padding:20px;
+    margin:10px;
+    height: 50px;
+    box-sizing: border-box;
+}
+.box2{
+    color: red;
+    background-color: chartreuse;
+    height: 50px;
+    border: 5px solid rgb(178, 93, 93);
+    padding:10px;
+    display:flex;
+}
+
+.id{
+    background-color:rgb(208, 131, 17);
+    color: aqua;
+    padding:20px;
+    margin:10px;
+    font: 30px arial;
+    text-align:left;
+    text-decoration: underline;
+    border: 10px solid;
+    border-color: crimson;
+}
