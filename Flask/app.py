@@ -1,0 +1,67 @@
+# render_template is used to render the html files
+from flask import Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+# Create a flask app and push the context
+app = Flask(__name__)
+app.app_context().push()
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+# Create a model for the database to be created
+
+
+class Todo(db.Model):
+    sno = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200), nullable=False)
+    desc = db.Column(db.String(500), nullable=False)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self) -> str:
+        return f'{self.sno} -{self.title}'
+
+
+@app.route('/', methods=['GET', 'POST'])
+def hello_world():
+    if request.method == "POST":
+        title = request.form['title']
+        desc = request.form['desc']
+        data = Todo(title=title, desc=desc)
+        db.session.add(data)
+        db.session.commit()
+        print("Data added successfully")
+    alltodo = Todo.query.all()
+    return render_template("index.html", alltodo=alltodo)
+
+
+@app.route("/delete/<int:sno>", methods=['POST', 'DELETE'])
+def delete(sno):
+    if request.method == "POST":
+        todo = Todo.query.filter_by(sno=sno).first()
+        if todo:
+            db.session.delete(todo)
+            db.session.commit()
+        return redirect("/")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+@app.route("/update/<int:sno>", methods=['GET','POST','UPDATE'])
+def updaate(sno):
+    if request.method == "POST":
+        title = request.form['title']
+        description = request.form['desc']
+
+        todo = Todo.query.get(sno)
+        if todo:
+            todo.title = title
+            todo.desc = description
+            db.session.add(todo)
+            db.session.commit()
+            return redirect("/")
+        todo = Todo.query.get(sno)
+        return render_template("update.html", todo=todo)
