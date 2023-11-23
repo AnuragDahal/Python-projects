@@ -1,6 +1,7 @@
 import win10toast
 #win10toast is a module that can be used to display windows 10 notifications
 import datetime
+WPARAM=42
 
 data=datetime.datetime.now()
 data=str(data)
