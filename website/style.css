@@ -18,7 +18,7 @@ a:visited{
     color: rgb(255, 255, 255);
 }
 a:hover{
-    color: rgb(115, 20, 20);
+    color: rgb(166, 149, 149);
 }
 pre{
     background-color: rgb(255, 255, 255);
@@ -27,5 +27,4 @@ pre{
     margin: 10px;
     height: 200px;
     box-sizing: border-box;
-    
 }
