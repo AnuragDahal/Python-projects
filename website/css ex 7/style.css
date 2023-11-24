@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  margin: 5%;
+  width: 50vw;
+  height: 50vh;
+  align-items: flex-end;
+  background-color: #58efec;
+}
+.ball {
+  width: 70px;
+  height: 70px;
+  background-color: #c77dff;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out 1s infinite,
+    bounce2 1s ease-out 2s infinite backwards,
+    bounce3 1s ease-out 3s infinite backwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(100%);
+  }
+  20% {
+    transform: translate(100%, -400%);
+  }
+  50% {
+    transform: translate(100%, -300%);
+  }
+  80% {
+    transform: translate(100%, -200%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
+@keyframes bounce2 {
+  0% {
+    transform: translate(200%);
+  }
+  20% {
+    transform: translate(100%, -400%);
+  }
+  50% {
+    transform: translate(100%, -300%);
+  }
+  80% {
+    transform: translate(100%, -200%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
+/* @keyframes bounce3 {
+  0% {
+    transform: translate(300%);
+  }
+  20% {
+    transform: translate(100%, -400%);
+  }
+  50% {
+    transform: translate(100%, -300%);
+  }
+  80% {
+    transform: translate(100%, -200%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+} */
